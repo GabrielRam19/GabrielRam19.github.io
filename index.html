@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gabriel Ramirez-Portafolio</title>
+	<link rel="stylesheet" href="web-personal-frontend/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="web-personal-frontend/css/fontello.css">
+	<link rel="stylesheet" href="web-personal-frontend/css/styles.css">
+	<script src="https://kit.fontawesome.com/7cce539473.js" crossorigin="anonymous"></script>
+	<link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<div class="nav row rounded-top align-items-stretch justify-content-between">
+				<div
+					class="col-md-12 col-lg logo d-flex align-items-center justify-content-center justify-content-lg-start">
+					<a class="nombre" href="index.html">Gabriel Ramirez</a>
+					<samp class="icono icon-dot"></samp>
+					<p>Programación</p>
+				</div>
+				<!-- Menu de navegación -->
+				<nav class="col-md-12 col-lg-auto menu d-flex align-items-stretch flex-wrap flex-sm-nowrap">
+					<a href="index.html" class="c-1 d-flex align-items-center">
+						<div class="d-flex flex-column text-center">
+							<span>Portafolio</span>
+							<i class="icono icon-briefcase"></i>
+						</div>
+					</a>
+					<a href="web-personal-frontend/about.html" class="c-2 d-flex align-items-center">
+						<div class="d-flex flex-column text-center">
+							<span>Acerca de</span>
+							<i class="icono icon-user"></i>
+						</div>
+					</a>
+					<a href="web-personal-frontend/contact.html" class="c-3 d-flex align-items-center">
+						<div class="d-flex flex-column text-center">
+							<span>Contacto</span>
+							<i class="icono icon-mail"></i>
+						</div>
+					</a>
+				</nav>
+			</div>
+			<!--Slider -->
+			<div class="row slider">
+				<div class="col">
+					<div class="carousel slide" id="slider" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#slider" data-slide-to="0" class="active"></li>
+							<li data-target="#slider" data-slide-to="1"></li>
+							<li data-target="#slider" data-slide-to="2"></li>
+						</ol>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="web-personal-frontend/img/slide1.jpg" class="d-block w-100" alt="Slide#1">
+							</div>
+							<div class="carousel-item">
+								<img src="web-personal-frontend/img/slide2.jpg" class="d-block w-100" alt="Slide#1">
+							</div>
+							<div class="carousel-item">
+								<img src="web-personal-frontend/img/slide3.jpg" class="d-block w-100" alt="Slide#1">
+							</div>
+						</div>
+
+						<a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Anterior</span>
+						</a>
+						<a class="carousel-control-next" href="#slider" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Siguiente</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!--Contenido-->
+	<main>
+		<!--Portafolios contenido -->
+		<div class="container">
+			<div class="row contenedor">
+				<div class="col">
+					<h2 class="titulo">Portafolio</h2>
+					<div class="row projects justify-content-center">
+						<div class="content-project col-12 col-lg-4 col-md-4">
+							<a href="" data-toggle="modal" data-target="#modal">
+								<img src="web-personal-frontend/img/Calculadora.jpg" class="img-fluid" alt="...">
+							</a>
+						</div>
+						<div class="content-project col-12 col-lg-8 col-md-8">
+							<h5 class="title-project">Calculadora Web</h5>
+							<p>Proyecto creado utilizando HTML,CSS y JAVASCRIPT.
+								Esta calculadora funciona a nivel basico con calculos como
+								suma, resta, multiplicacion y division de numeros enteros y
+								flotantes. 
+							</p>
+							<a href="CalculadoraWeb/index.html" class="btn link-project">Ver Proyecto</a>
+						</div>
+						<div class="content-project col-12 col-lg-4 col-md-4">
+							<a href="" data-toggle="modal" data-target="#modal">
+								<img src="web-personal-frontend/img/weatherScreen.jpg" class="img-fluid" alt="...">
+							</a>
+						</div>
+						<div class="content-project col-12 col-lg-8 col-md-8">
+							<h5 class="title-project">Web de clima</h5>
+							<p>
+								Proyecto app web de clima, la cual consume la api externa 'open wheater map' para obtener los
+								datos del clima de cualquier pais, asi como de las ciudades mas importantes del mundo. Ademas
+								se utiliza el servicio de amazon para vincular la temperatura de la localización buscada a un
+								icono y mostrarlo al usuario.
+							</p>
+							<a href="WebClima/index.html" class="btn link-project">Ver Proyecto</a>
+						</div>
+
+						<!-- Ventana Modal -->
+						<div class="modal fade" id="modal">
+							<div class="modal-dialog d-flex justify-content-center align-items-center">
+								<div class="modal-content">
+									<img src="img/bg.jpg" id="imagen-modal" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!--Pie de pagina -->
+	<footer>
+		<div class="container">
+			<div class="row redes-sociales justify-content-center">
+				<div class="col-auto">
+					<a href="https://www.facebook.com/profile.php?id=100037788934428" target="_blank" class="icono icon-facebook facebook"></a>
+					<a href="https://github.com/GabrielRam19" target="_blank" class="icono"><i class="fa-brands fa-github"></i></a>
+					<a href="https://www.linkedin.com/in/juan-gabriel-ramirez-gramajo-96a913233/" target="_blank" class="icono"><i class="fa-brands fa-linkedin"></i></a>
+				</div>
+				<div class="col-12 text-center copyright">
+					<samp>
+						<p>Copyright &copy; 2022 · Gabriel Ramirez (Programador Web) </p>
+					</samp>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="web-personal-frontend/js/jquery-3.4.1.min.js"></script>
+	<script src="web-personal-frontend/js/popper.min.js"></script>
+	<script src="web-personal-frontend/js/bootstrap.min.js"></script>
+	<script src="web-personal-frontend/js/scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Press+Start+2P&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7cce539473.js" crossorigin="anonymous"></script>
+    <script src="JS/index.js"></script>
+    <link rel="shortcut icon" href="IMG/calculator.png" type="image/x-icon">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <header id="header">
+        <h2>Creado por Gabriel Ramirez</h2>
+        <div id="home">
+            <a href="../index.html"><i class="fa-solid fa-house-user"></i></a>
+        </div>
+        <div id="social">
+            <a href="https://github.com/GabrielRam19" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/juan-gabriel-ramirez-gramajo-96a913233/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </header>
+    <main id="main">
+        <div id="screen">
+            <h2 id="screen1"></h2>
+        </div>
+        <div id="buttons">
+            <ul>
+                <li onclick="añadir('0')">0</li>
+                <li onclick="añadir('1')">1</li>
+                <li onclick="añadir('2')">2</li>
+                <li onclick="añadir('+')">+</li>
+                <li onclick="añadir('3')">3</li>
+                <li onclick="añadir('4')">4</li>
+                <li onclick="añadir('5')">5</li>
+                <li onclick="añadir('-')">-</li>
+                <li onclick="añadir('6')">6</li>
+                <li onclick="añadir('7')">7</li>
+                <li onclick="añadir('8')">8</li>
+                <li onclick="añadir('*')">*</li>
+                <li onclick="añadir('9')">9</li>
+                <li onclick="añadir('.')">.</li>
+                <li onclick="del()">AC</li>
+                <li onclick="añadir('/')">/</li>
+                <li onclick="calc()">=</li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

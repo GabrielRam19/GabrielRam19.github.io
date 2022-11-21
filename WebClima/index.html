@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Style.css">
+    <link rel="stylesheet" href="CSS/mediaQuery.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/7cce539473.js" crossorigin="anonymous"></script>
+    <title>Weather</title>
+</head>
+<body>
+    <section class="navegacion">
+        <div class="row">
+            <nav class="navbar bg-dark">
+                <div class="container-fluid">
+                  <a class="navbar-brand">Weather App</a>
+                  <a href="../index.html" id="home"><i class="fa-solid fa-house-user"></i></a>
+                  <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <span class="msg"></span>
+                  </form>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <main class="main" id="main">
+        <a href="index.html"><button class="noselect">
+            <span class="text">Reset</span>
+            <span class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z">
+            </path>
+            </svg>
+            </span>
+        </button></a>
+        <section class="card-body" id="card">
+            <div class="container">
+              <ul class="cities" id="cities"></ul>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="JS/main.js"></script>
+</html>
