@@ -1,0 +1,64 @@
+
+@keyframes animation{
+    0%{
+      color:rgb(83, 0, 161);
+      cursor:pointer;
+    }
+    10%{
+      color:rgb(112, 9, 209);
+      cursor:pointer;
+    }
+    30%{
+      color:yellow;
+      cursor:pointer;
+    }
+    50%{
+        color: red;
+        cursor:pointer;
+    }
+    75%{
+        color: rgb(0, 255, 255);
+        cursor:pointer;
+    }
+    100%{
+      color: lime;
+      cursor:pointer;
+    }
+}
+
+#label{
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.5vw;
+    text-align: center;
+    padding-top: 7vw;
+}
+#label1{
+    font-weight: 700;
+    font-size: 2vw;
+    text-align: center;
+    margin-bottom: 2vw;
+}
+#logo:hover{
+  animation: animation 1.2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+#header{
+  top: 0;
+  z-index: 15;
+  position: fixed;
+  width: 100%;
+}
+.img-thumbnail:hover{
+  cursor: pointer;
+}
+#main{
+  margin-top: 8vw;
+}
+.imagen{
+  height: 30vw;
+  width: 45vw;
+  border: 3px white;
+  border-radius: 2em;
+}

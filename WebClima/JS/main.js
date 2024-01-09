@@ -1,24 +1,20 @@
-/*SEARCH BY USING A CITY NAME (e.g. athens) OR A COMMA-SEPARATED CITY NAME ALONG WITH THE COUNTRY CODE (e.g. athens,gr)*/
+
 const form = document.querySelector(".navegacion form");
 const input = document.querySelector(".navegacion input");
 const list = document.querySelector(".card-body .cities");
-/*SUBSCRIBE HERE FOR API KEY: https://home.openweathermap.org/users/sign_up*/
 const apiKey = "8ad8b53b66f7754d96efeee99dfff5c7";
 
 form.addEventListener("submit", e => {
   e.preventDefault();
   let inputVal = input.value;
 
-  //check if there's already a city
   const listItems = list.querySelectorAll(".card-body .city");
   const listItemsArray = Array.from(listItems);
 
   if (listItemsArray.length > 0) {
     const filteredArray = listItemsArray.filter(el => {
       let content = "";
-      //athens,gr
       if (inputVal.includes(",")) {
-        //athens,grrrrrr->invalid country code, so we keep only the first part of inputVal
         if (inputVal.split(",")[1].length > 2) {
           inputVal = inputVal.split(",")[0];
           content = el
@@ -28,23 +24,21 @@ form.addEventListener("submit", e => {
           content = el.querySelector(".city-name").dataset.name.toLowerCase();
         }
       } else {
-        //athens
         content = el.querySelector(".city-name span").textContent.toLowerCase();
       }
       return content == inputVal.toLowerCase();
     });
 
     if (filteredArray.length > 0) {
-      alert(`You already know the weather for ${
+      alert(`Ya se tiene el clima para ${
         filteredArray[0].querySelector(".city-name span").textContent
-      } ...otherwise be more specific by providing the country code as well 😉`);
+      } ...porfavor sea mas especifico, puede ingresar el codigo de pais tambien`);
       form.reset();
       input.focus();
       return;
     }
   }
 
-  //ajax here
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=metric`;
 
   fetch(url)
@@ -74,7 +68,7 @@ form.addEventListener("submit", e => {
       list.appendChild(li);
     })
     .catch(() => {
-      alert("Please search for a valid city 😩");
+      alert("Porfavor ingrese una ciudad valida");
     });
 
   form.reset();
