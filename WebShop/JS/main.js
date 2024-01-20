@@ -1,46 +1,10 @@
+import baseDeDatos from './db.js';
+
 document.addEventListener('DOMContentLoaded', () => {
     // Variables
-const baseDeDatos = [
-   {
-       id: 1,
-       nombre: 'PlayStation 5',
-       precio: 500,
-       imagen: '../IMG/PS5.jpg',
-       imagen1:'../IMG/stock ps5.jpg',
-       descripcion: 'Consola de ultima generación de Sony, cuenta con los componentes mas modernos en el mercado actual.',
-       enlace: '../TEMPLATES/Specifications.html'
-   },
-   {
-       id: 2,
-       nombre: 'Nintendo Switch',
-       precio: 250,
-       imagen: '../IMG/switch.jpg',
-       imagen1:'../IMG/stock switch.jpg',
-       descripcion: 'Consola de nintendo con componentes innovadores que ayudan a que la jugabilidad sea mejor.',
-       enlace: '../TEMPLATES/Specifications.html'
-   },
-   {
-       id: 3,
-       nombre: 'Xbox Series X',
-       precio: 450,
-       imagen: '../IMG/xbox.jpg',
-       imagen1:'../IMG/stock xbox.jpg',
-       descripcion: 'Xbox es una marca de microsoft la cual lanza su nueva consola "Series X" para competir al mayor nivel',
-       enlace: '../TEMPLATES/Specifications.html'
-   },
-   {
-       id: 4,
-       nombre: 'Playstation 4',
-       precio: 300,
-       imagen: '../IMG/play4.jpg',
-       imagen1: '../IMG/stock ps4.jpg',
-       descripcion: 'Consola de la generación pasada de playstation, contiene un catalogo gigante de juegos y novedades.',
-       enlace: '../TEMPLATES/Specifications.html'
-   }
-];
-
-   let carrito = [];
-   const divisa = '€';
+    let carrito = [];
+   let myinput=document.getElementById('buscar');
+   const divisa = '$';
    const DOMitems = document.querySelector('#items');
    const DOMcarrito = document.querySelector('#carrito');
    const DOMtotal = document.querySelector('#total');
@@ -53,8 +17,8 @@ const baseDeDatos = [
 * Dibuja todos los productos a partir de la base de datos. No confundir con el carrito
 */
 
-function renderizarProductos() {
-   baseDeDatos.forEach((info) => {
+function renderizarProductos(filtrado=baseDeDatos) {
+   filtrado.forEach((info) => {
        // Estructura
        const miNodo = document.createElement('div');
        miNodo.classList.add('card', 'col-sm-4');
@@ -67,7 +31,8 @@ function renderizarProductos() {
        miNodoTitle.textContent = info.nombre;
        //Enlace
        const enlace=document.createElement('a')
-       enlace.setAttribute('href',info.enlace)
+       enlace.href='../TEMPLATES/Specifications.html?id='+info.id;
+       enlace.textContent='Ver mas';
        // Imagen
        const miNodoImagen = document.createElement('img');
        miNodoImagen.classList.add('img-thumbnail');
@@ -157,7 +122,7 @@ function borrarItemCarrito(evento) {
    const id = evento.target.dataset.item;
    // Borramos todos los productos
    carrito = carrito.filter((carritoId) => {
-       return carritoId !== id;
+       return carritoId != id;
    });
    // volvemos a renderizar
    renderizarCarrito();
@@ -204,11 +169,21 @@ function cargarCarritoDeLocalStorage () {
     }
 }
 
-// Funcion para hacer una busqueda
-function Buscar(){
-    var cadena=document.getElementById('buscar')
-
-}
+//funcion de busqueda segun el nombre
+//en esta funcion se renderizan los productos que coincidan con la busqueda inmediantamente el usuario empieza a escribir
+myinput.addEventListener('input',function(){
+    console.log(baseDeDatos);
+    let filtrado=[];
+    let busqueda=myinput.value.replace(/\s/g, "")
+    baseDeDatos.forEach((info) => {
+        let variable=info.nombre.replace(/\s/g, "")
+        if(variable.toLowerCase().includes(busqueda.toLowerCase())){
+            filtrado.push(info);
+        }
+    });
+    DOMitems.innerHTML='';
+    renderizarProductos(filtrado);
+});
 
 // Eventos
 DOMbotonVaciar.addEventListener('click', vaciarCarrito);
@@ -217,4 +192,7 @@ DOMbotonVaciar.addEventListener('click', vaciarCarrito);
 cargarCarritoDeLocalStorage();
 renderizarProductos();
 renderizarCarrito();
+
 });
+
+export default carrito;

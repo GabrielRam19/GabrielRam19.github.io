@@ -56,9 +56,133 @@
 #main{
   margin-top: 8vw;
 }
+#agregar{
+  margin-right: 0.5vw;
+}
 .imagen{
   height: 30vw;
   width: 45vw;
   border: 3px white;
   border-radius: 2em;
+  margin-bottom: 2vw;
+}
+.titulo{
+  font-size: 3vw;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 5vw;
+  font-family: 'Press Start 2P', system-ui;
+}
+.div{
+  justify-content: center;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2vw;
+}
+.divdesc{
+  display:flex;
+  flex-wrap: wrap;
+  margin-top: 2vw;
+  background-color: #03045e;
+  display: flex;
+  flex-direction: column;
+  padding-left: 3vw;
+}
+#dynamicCarousel {
+  max-height: 45vw;
+  width: 70%; /* Ajusta el ancho del contenedor del carrusel */
+  margin: auto;
+}
+
+.carousel-inner {
+  max-height: 50vw; /* Ajusta la altura máxima de las diapositivas */
+}
+
+.carousel-item img {
+  width: 50%; /* Ajusta el ancho de las imágenes en las diapositivas */
+  height: 30%;
+}
+
+.titulo2{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin-left: 3vw;
+  margin-top: 2vw;
+  font-family: 'Press Start 2P', system-ui;
+}
+
+.espec{
+  margin-bottom: 1vw;
+  margin-right:3vw;
+  background-color:#90e0ef;
+  padding: 2vw 3vw;
+  border: 1em;
+  border-radius: 0 2em 2em 0;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 1.2vw;
+}
+
+.descripcion2{
+  background-color: #00b4d8;
+  padding: 2vw;
+  border: 1em;
+  border-radius: 2em 0 0 2em;
+  margin-left: 20vw;
+  margin-bottom: 0;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 1.2vw;
+}
+
+.descripcion{
+  background-color: #03045e;
+  color: white;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 1.2vw;
+  padding-top: 1vw;
+}
+
+.contador{
+  background-color: crimson;
+  margin-right: 1vw;
+  margin-left: 1vw;
+  padding: 0.5vw;
+  border-radius: 2em;
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: white;
+}
+
+#pago{
+  display: flex;
+  left: 45vw;
+  bottom: 15vw;
+}
+#pago:hover{
+  box-shadow: 1em 1em 1em 1em #6d6d6d;
+}
+#pago .list-group-item{
+  display: flex;
+  height: 7vw;
+  justify-content: center;
+}
+
+#pago #paypal{
+  display: flex;
+  width: 25%;
+}
+
+#pago #visa{
+  display: flex;
+  width: 25%;
+}
+
+#pago #bitcoin{
+  display: flex;
+  width: 25%;
+}
+
+#pago .list-group-item:hover{
+  cursor: pointer;
+  background-color: #03045e;
+  color: white;
 }
