@@ -156,6 +156,7 @@
   display: flex;
   left: 45vw;
   bottom: 15vw;
+  width: 30rem;
 }
 #pago:hover{
   box-shadow: 1em 1em 1em 1em #6d6d6d;
@@ -185,4 +186,146 @@
   cursor: pointer;
   background-color: #03045e;
   color: white;
+}
+
+@media(max-width:1920px){
+  #pago{
+    display: flex;
+    margin-top: 3vw;
+    width: 60%;
+  }
+  #pago .list-group-item{
+    display: flex;
+    height: 5vw;
+    justify-content: center;
+  }
+}
+
+@media(max-width:810px){
+  #pago{
+    display:flex;
+    bottom: 43vw;
+    width: 20rem;
+  }
+  #pago #paypal{
+    width: 10%;
+  }
+
+  #pago #visa{
+    width: 10%;
+  }
+  #pago #bitcoin{
+    width: 10%;
+  }
+
+  #label{
+    font-size: 3vw;
+    padding-top: 10vw;
+  }
+  #dynamicCarousel{
+    margin-top: 10vw;
+  }
+  .titulo{
+    margin-top: 7vw;
+  }
+  .descripcion{
+    font-size: 2vw;
+  }
+  .descripcion2{
+    font-size: 2vw;
+  }
+  .espec{
+    font-size: 2vw;
+  }
+}
+
+
+@media(max-width:500px){
+  #label{
+    font-size: 7vw;
+    padding-top: 15vw;
+  }
+
+  #label1{
+    font-size: 6vw;
+  }
+
+  #pago{
+    display: flex;
+    top: 6vw;
+    left: 10vw;
+  }
+
+  #pago #paypal{
+    width: 20%;
+  }
+
+  #pago #visa{
+    width: 20%;
+  }
+
+  #pago #bitcoin{
+    width: 20%;
+  }
+
+  #pago .list-group-item{
+    display: flex;
+    height: 15vw;
+    justify-content: center;
+  }
+  #dynamicCarousel{
+    margin-top: 15vw;
+  }
+  .titulo{
+    font-size: 7vw;
+  }
+  .descripcion{
+    font-size: 4vw;
+  }
+  .descripcion2{
+    font-size: 4vw;
+  }
+  .titulo2{
+    font-size: 5.7vw;
+  }
+  .espec{
+    font-size: 2vw;
+  }
+}
+
+@media(max-width:360px){
+  #label{
+    font-size: 7vw;
+    margin-top: 12vw;
+  }
+
+  #label1{
+    font-size: 6vw;
+  }
+  #pago{
+    display: flex;
+    left: 7vw;
+  }
+
+  #pago:hover{
+    box-shadow: 0.3em 0.3em 0.3em 0.3em #6d6d6d;
+  }
+
+  #buscar{
+    width: 35vw;
+  }
+  #dynamicCarousel{
+    margin-top: 30vw;
+  }
+
+  .espec{
+    font-size: 4vw;
+    grid-column: span 2;
+  }
+  .imagen{
+    grid-row: 2;
+    grid-column: span 2;
+    grid-row: span 2;
+    width:60%;
+  }
 }
